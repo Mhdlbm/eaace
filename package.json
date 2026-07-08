@@ -1,0 +1,21 @@
+{
+  "name": "eaace",
+  "version": "2.1.0",
+  "description": "Enterprise Asset & Architecture Compliance Engine to validate configurations against localized governance.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node tests/engine.test.js"
+  },
+  "keywords": [
+    "compliance",
+    "ast-parser",
+    "governance",
+    "architecture-audit",
+    "static-analysis"
+  ],
+  "author": "Muhammed Labeeb M.",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
