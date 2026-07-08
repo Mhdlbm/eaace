@@ -1,0 +1,27 @@
+name: Continuous Integration Architecture Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-compliance-engine:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+    - name: Checkout Source Code Workspace
+      uses: actions/checkout@v4
+
+    - name: Initialize Node.js Environment v${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Execute Operational Diagnostics & Unit Test Suite
+      run: npm test
