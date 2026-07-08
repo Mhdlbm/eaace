@@ -1,0 +1,25 @@
+{
+  "policyMetadata": {
+    "engineVersion": "2.1.0",
+    "lastUpdated": "2026-07-09"
+  },
+  "regionalProfiles": {
+    "GLOBAL_STANDARD": {
+      "requireRegionTag": true,
+      "disallowedAccessModes": ["PUBLIC_ALLOW_ALL"],
+      "encryptionStandard": "AES_256"
+    },
+    "EMEA_DUBAI_CORPORATE": {
+      "requireRegionTag": true,
+      "disallowedAccessModes": ["PUBLIC_ALLOW_ALL", "ANONYMOUS_PROXIES"],
+      "requiredComplianceTags": ["VAT-Compliant", "Data-Localization-AE"],
+      "encryptionStandard": "AES_256"
+    },
+    "APAC_INDIA_REGULATORY": {
+      "requireRegionTag": true,
+      "disallowedAccessModes": ["PUBLIC_ALLOW_ALL"],
+      "requiredComplianceTags": ["GST-Ready", "Data-Sovereignty-IN"],
+      "encryptionStandard": "AES_256"
+    }
+  }
+}
